@@ -1,36 +1,17 @@
-import java.util.ArrayList;
-import java.util.Arrays;
 
-import static java.lang.Integer.parseInt;
 
 public class RightTriangle {
     public static void main(String[] args) {
-        if (args.length == 3) {
-            Arrays.sort(args);
-            System.out.println(Arrays.toString(args));
+        int a = Integer.parseInt(args[0]);
+        int b = Integer.parseInt(args[1]);
+        int c = Integer.parseInt(args[2]);
+//         int a = 0;
+//         int b = 0;
+//         int c = -2;
+        boolean case1 = (a*a)+(b*b)==(c*c);
+        boolean case2 = a > 0 && b >0 && c > 0;
 
-            int a = parseInt(args[0]);
-            int b = parseInt(args[1]);
-            int c = parseInt(args[2]);
-
-            if (a * a + b * b == c * c) {
-                System.out.println("true");
-
-
-//            if (a < 0 || b < 0 || c < 0) {
-//                System.out.println("false");
-//
-//            } else if (a * a + b * b == c * c) {
-//                System.out.println("true");
-//            }
-            } else {
-                System.out.println("false");
-            }
-
-        } else {
-            System.out.println("false");
-
-        }
+        System.out.println(case1 == case2 && case1 != false);
     }
 }
 
